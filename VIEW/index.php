@@ -49,7 +49,9 @@
     </div>
 
     <div class="col-sm-8 text-left"> 
-      <h1>Bienvenue sur je suis une très jolie fleur </h1>
+      <?php echo include'../METIER/displaying.php' ;
+      echo  Display();
+      ?>
       
       <hr>
       <h3>Test</h3>
