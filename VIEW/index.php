@@ -8,6 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+
+  <script> 
+
+
+
+   
+</script>
+ 
 </head>
 <body>
 
@@ -20,10 +28,10 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Fleurs.html">Les fleurs</a>
+          <a class="nav-link" href="Fleurs.php">Les fleurs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="About.html">Informations</a>
@@ -32,8 +40,8 @@
           <a class="nav-link" href="#">About</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <form class="form-inline my-2 my-lg-0" method="get" action="Fleurs.php"  >
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" id="scrtextinput">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
@@ -49,9 +57,7 @@
     </div>
 
     <div class="col-sm-8 text-left"> 
-      <?php echo include'../METIER/displaying.php' ;
-      echo  Display();
-      ?>
+     
       
       <hr>
       <h3>Test</h3>
@@ -71,4 +77,5 @@
 
 
 </body>
+
 </html>

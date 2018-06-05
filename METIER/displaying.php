@@ -11,21 +11,38 @@ function Display(){
 
 foreach ($result as $key) {
     # code...
-}
+
 echo 
-'<div class="bs-component">'.
-    '<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">'
-        .'<div class="card-header">Header</div>'
+
+    '<div class="card text-white bg-primary mb-3" id="cardId" style="max-width: 20rem;">'
+
+        .'<div class="card-header" id='.$key['Nom'].' >'.$key['Nom'].'</div>'
+
         .'<div class="card-body">'
-         .' <h4 class="card-title">' .$key['Nom']. '</h4>'.
-          '<img style="height: 200px; width: 100%; display: block;" src="../sueur.jpg"/>'.
-        '</div>'
+
+         .'<h4 class="card-title">'.$key['Description'].'</h4>'.
+         
+          '<img style="height: 200px; width: 100%; display: block;" src='.$key['photo'].'/>'.
+          
+
+          '<select class="form-control" id="exampleSelect1">';
+
+          for ($i=1; $i <$key['quantite'] ; $i++) 
+          { 
+           echo '<option>'.$i.'</option>';
+         
+           }
+
+         echo '</select>'
+    
+          
+        .'</div>'
       .'</div>'
-    .'</div>';
+    ;
 
 
 
-
+}
 
 }
 

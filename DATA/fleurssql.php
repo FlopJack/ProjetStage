@@ -4,7 +4,7 @@
 
     
         include "cnx.php";
-        $req = "SELECT  idFleurs,Nom,'description',quantite,photo  FROM fleurs  ";
+        $req = "SELECT  idFleurs,Nom,Description,quantite,photo  FROM fleurs  ";
         $stm=$bdd->prepare($req);
         $stm->execute();
         $result= $stm->fetchAll();

@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+  <script type="text/javascript" src="index.js"></script>
+ 
 </head>
 <body>
 
@@ -20,10 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Fleurs.html">Les fleurs</a>
+          <a class="nav-link" href="Fleurs.php">Les fleurs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Informations</a>
@@ -32,10 +34,10 @@
           <a class="nav-link" href="About.html">About</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+     
+        <input class="form-control mr-sm-2" id="srcId" name="search" type="text"
+         placeholder="Search" onkeyup="searchFunction()">
+      
     </div>
   </nav>
 
@@ -47,17 +49,11 @@
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
-    <div class="col-lg-4">
+    <div class="card-deck">
 
-
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-        <input class="form-check-input" type="checkbox" value="" checked="">
-          <h4 class="card-title">Primary card title</h4> 
-          <img style="height: 200px; width: 100%; display: block;" src="../sueur.jpg"/>
-        </div>
-      </div>
+      <?php echo include'../METIER/displaying.php' ;
+      echo  Display();
+      ?>
     </div>
 </div>
 
