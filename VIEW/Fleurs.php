@@ -8,40 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
-
- <script>
-function SearchBar()
-{
-var srcinput= $("#srcId").val();
-var search=$('.cardId');
-
-
-$(search).children('div').each(function(index,value)
-{
-   if(index%2===0)
-  {
-    
-         if(value.id==srcinput){
-          $(this).parent().show();
-         }
-         else
-         {
-          $(this).parent().hide();         
-         }
-         if(srcinput==""){
-
-           $('.cardId').show();
-         }
-
-  
-  }
-  
-}
-);
-}
-
-
-</script>
+  <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 

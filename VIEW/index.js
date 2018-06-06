@@ -1,24 +1,29 @@
 
-function searchFunction(){
-var input,inputVal, card,cardVal ;
-input =document.getElementById("srcId");
-inputVal=input.value.toUpperCase();
+function SearchBar()
+{
+var srcinput= $("#srcId").val();
+var search=$('.cardId');
 
-card=document.getElementById("cardId");
-cardVal=card.value.toUpperCase();
 
-if(cardVal==inputVal){
+$(search).children('div').each(function(index,value)
+{
+   if(index%2===0)
+  {
+    
+         if(value.id==srcinput){
+          $(this).parent().show();
+         }
+         else
+         {
+          $(this).parent().hide();         
+         }
+         if(srcinput==""){
 
- input.style.display="";
-
-}else {
-
-input.style.display='none';
-
+           $('.cardId').show();
+         }
+  } 
 }
-
-
-
+);
 }
 
 
