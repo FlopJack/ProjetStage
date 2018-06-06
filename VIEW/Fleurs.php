@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
 
  <script>
-function addEvents()
+function SearchBar()
 {
 var srcinput= $("#srcId").val();
 var search=$('.cardId');
@@ -18,16 +18,19 @@ var search=$('.cardId');
 
 $(search).children('div').each(function(index,value)
 {
- 
    if(index%2===0)
   {
+    
          if(value.id==srcinput){
-            
-         $(this).parent().show();
-         
-         }else{
-          $(this).parent().hide();
-          
+          $(this).parent().show();
+         }
+         else
+         {
+          $(this).parent().hide();         
+         }
+         if(srcinput==""){
+
+           $('.cardId').show();
          }
 
   
@@ -65,7 +68,7 @@ $(search).children('div').each(function(index,value)
       </ul>
      
         <input class="form-control mr-sm-2" id="srcId" 
-         placeholder="Search" onkeyup="addEvents()">
+         placeholder="Search" onkeyup="SearchBar()">
       
     </div>
   </nav>
