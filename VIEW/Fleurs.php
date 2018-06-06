@@ -8,8 +8,37 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
-  <script type="text/javascript" src="index.js"></script>
+
+ <script>
+function addEvents()
+{
+var srcinput= $("#srcId").val();
+var search=$('.cardId');
+
+
+$(search).children('div').each(function(index,value)
+{
  
+   if(index%2===0)
+  {
+         if(value.id==srcinput){
+            
+         $(this).parent().show();
+         
+         }else{
+          $(this).parent().hide();
+          
+         }
+
+  
+  }
+  
+}
+);
+}
+
+
+</script>
 </head>
 <body>
 
@@ -35,8 +64,8 @@
         </li>
       </ul>
      
-        <input class="form-control mr-sm-2" id="srcId" name="search" type="text"
-         placeholder="Search" onkeyup="searchFunction()">
+        <input class="form-control mr-sm-2" id="srcId" 
+         placeholder="Search" onkeyup="addEvents()">
       
     </div>
   </nav>

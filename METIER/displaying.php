@@ -14,9 +14,9 @@ foreach ($result as $key) {
 
 echo 
 
-    '<div class="card text-white bg-primary mb-3" id="cardId" style="max-width: 20rem;">'
+    '<div class="card text-white bg-primary mb-3 cardId" style="max-width: 20rem;">'
 
-        .'<div class="card-header" id='.$key['Nom'].' >'.$key['Nom'].'</div>'
+        .'<div class="card-header cardHead" id='.$key['Nom'].' >'.$key['Nom'].'</div>'
 
         .'<div class="card-body">'
 
