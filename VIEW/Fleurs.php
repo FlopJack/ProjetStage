@@ -8,12 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="srcFleurs.js"></script>
+
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">GAEC</a>
+    <a class="navbar-brand" href="#">GAEC Engoulevents</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,30 +28,25 @@
           <a class="nav-link" href="Fleurs.php">Les fleurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Informations</a>
+          <a class="nav-link" href="About.html">Informations</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="About.html">About</a>
-        </li>
+     
       </ul>
      
-        <input class="form-control mr-sm-2" id="srcId" 
+        <input class="form-control col-3  " id="srcId" 
          placeholder="Search" onkeyup="SearchBar()">
       
     </div>
+
+
   </nav>
-
-
-<div class="container-fluid text-center">    
+  <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
     </div>
     <div class="card-deck">
 
-      <?php echo include'../METIER/displaying.php' ;
+      <?php echo include'../METIER/displaying.php';
       echo  Display();
       ?>
     </div>

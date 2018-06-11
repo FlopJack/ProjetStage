@@ -36,40 +36,26 @@
         <li class="nav-item">
           <a class="nav-link" href="About.html">Informations</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
+    
       </ul>
-      <form class="form-inline my-2 my-lg-0" method="get" action="Fleurs.php"  >
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" id="scrtextinput">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    
     </div>
   </nav>
 
 
-<div class="container-fluid text-center">    
+ <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+    
     </div>
 
     <div class="col-sm-8 text-left"> 
-     
-      
+      <h1>Bienvenue</h1>
+      <h1>Geac engoulevents vous fait partager et découvrir la passion des fleurs et de l'horticulture </h1>
       <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+     
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
+
     </div>
   </div>
 </div>
