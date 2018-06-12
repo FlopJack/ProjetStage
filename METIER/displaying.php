@@ -4,16 +4,14 @@
 
 function Display(){
     include '../DATA/fleurssql.php';
-
+   
   $result= GetFleurs();
 
   
 
 foreach ($result as $key) {
     
-echo 
-
-    '<div class="card text-white bg-primary mb-3 cardId " style="max-width: 20rem ">'.
+echo '<div class="card text-white bg-primary mb-3 cardId " style="max-width: 20rem ">'.
   
 
         '<div class="card-header cardHead" id='.$key['Nom'].'>'.$key['Nom'].'</div>'
@@ -35,7 +33,7 @@ echo
 
          echo '</select>';
         
-       
+        echo '<button type="button" class="btn btn-warning" onclick="GetIdNb()">Réserver</button>';
           
 
 
@@ -43,6 +41,7 @@ echo
           
         echo '</div>'
       .'</div>'
+    
     ;
 
 

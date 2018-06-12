@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
   <script type="text/javascript" src="srcFleurs.js"></script>
+  <script type="text/javascript" src="reserv.js"></script>
 
 </head>
 <body>
@@ -45,9 +49,9 @@
     <div class="col-sm-2 sidenav">
     </div>
     <div class="card-deck">
-
-      <?php echo include'../METIER/displaying.php';
+<?php echo include'../METIER/displaying.php';
       echo  Display();
+    
       ?>
     </div>
 </div>
