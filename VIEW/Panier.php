@@ -50,7 +50,10 @@
     <div class="col-sm-2 sidenav">
    
     </div>
-  
+  <?php 
+   print_r($_POST['serializePanier']);
+    
+          ?>
     </div>
 </div>
 </body>

@@ -64,7 +64,7 @@
 <script>
 
   $(document).ready(function(){
-    var object=[,];
+    var panier=[,];
     var code_html="OK!!";
    $(document).on("click","button",function(){
        
@@ -73,29 +73,29 @@ var btnName= this.value;
 var slcVal=$("select[id="+btnId+"]").val();
 
 
-object.push({Name: this.value, Quantite:slcVal});
-// $(object).each(function(nom,value){
-//   console.log(nom,value);
-// });
-//$(object).serializeArray();
+panier.push({Name:this.value, Quantite:slcVal});
 
-console.log(object);
-/*
-var data_to_send=$(object).serializeArray();
+
+var serializePanier=JSON.stringify(panier);
 
 $.ajax({
-type:"POST",
-url:"Panier.php",
-data:data_to_send,
-success:function(code_html,statut){
-  console.log(code_html);
-
-}
-
-
-})
-
-*/
+    url: "Panier.php",
+    type:'POST',
+    data: serializePanier,
+   
+    success : function(code_html, statut){
+        console.log(serializePanier);
+        console.log(statut);
+        
+    },
+    error : function(resultat, statut, erreur){
+        console.log("La requête n'a pas aboutie...");
+        console.log(resultat);
+        console.log(statut);
+        console.log(erreur);
+    
+    }
+    });
 
 
 
@@ -103,6 +103,8 @@ success:function(code_html,statut){
 });    
    </script>
 </body>
+<h1> <?php  $robert=json_decode($_POST['Name']);
+echo $robert;?></h1>
 </html>
 
 
