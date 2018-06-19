@@ -12,7 +12,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
   <script type="text/javascript" src="srcFleurs.js"></script>
-  <script type="text/javascript" src="reserv.js"></script>
+ 
+ 
+ 
+ 
 
 </head>
 <body>
@@ -34,6 +37,9 @@
         <li class="nav-item">
           <a class="nav-link" href="About.html">Informations</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+</li>
      
       </ul>
      
@@ -49,12 +55,54 @@
     <div class="col-sm-2 sidenav">
     </div>
     <div class="card-deck">
-<?php echo include'../METIER/displaying.php';
-      echo  Display();
-    
-      ?>
+     <?php
+     include '../METIER/displaying.php' ;
+     echo Display();
+     ?>
     </div>
 </div>
+<script>
 
+  $(document).ready(function(){
+    var object=[,];
+    var code_html="OK!!";
+   $(document).on("click","button",function(){
+       
+var btnId=this.id;
+var btnName= this.value; 
+var slcVal=$("select[id="+btnId+"]").val();
+
+
+object.push({Name: this.value, Quantite:slcVal});
+// $(object).each(function(nom,value){
+//   console.log(nom,value);
+// });
+//$(object).serializeArray();
+
+console.log(object);
+/*
+var data_to_send=$(object).serializeArray();
+
+$.ajax({
+type:"POST",
+url:"Panier.php",
+data:data_to_send,
+success:function(code_html,statut){
+  console.log(code_html);
+
+}
+
+
+})
+
+*/
+
+
+
+    });
+});    
+   </script>
 </body>
 </html>
+
+

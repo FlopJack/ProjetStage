@@ -5,12 +5,12 @@ var srcinput= $("#srcId").val();
 var search=$('.cardId');
 
 
-$(search).children('div').each(function(index,value)
+$(search).children('div').children('input').each(function(index,value)
 {
    if(index%2===0)
   {
     
-         if(value.id==srcinput){
+         if(value.name==srcinput){
           $(this).parent().show();
          }
          else

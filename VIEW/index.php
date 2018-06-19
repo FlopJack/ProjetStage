@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +41,9 @@
         <li class="nav-item">
           <a class="nav-link" href="About.html">Informations</a>
         </li>
-    
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+        </li>
       </ul>
     
     </div>
