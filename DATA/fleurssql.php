@@ -15,4 +15,18 @@
 }
 
 
+function GetFLeursName(){
+
+    
+        include "cnx.php";
+        $req = "SELECT  Nom FROM fleurs ORDER BY RAND () LIMIT 1  ";
+        $stm=$bdd->prepare($req);
+        $stm->execute();
+        $result= $stm->fetch();
+        return $result;
+
+
+
+}
+
 ?>
