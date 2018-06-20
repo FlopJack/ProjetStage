@@ -8,7 +8,7 @@ var urlApp="https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searc
 $.ajax({
     url:urlApp,
     type:'GET',
-    contentType:"application/json;charset=utf-8",
+    contentType:"application/json;charset=utf-8" ,
     async: true,
     datatype:"json",
     success:function (data,statut){
