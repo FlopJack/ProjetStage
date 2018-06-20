@@ -13,6 +13,8 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+  <script type="text/javascript" src="Api.js" ></script>
+
 
   <script> 
 
@@ -53,7 +55,10 @@ session_start();
  <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-    
+    <h2>Article</h2>
+    <input  id="searchItem">
+    <input id="search" class="btn btn-info" value="find"/>
+
     </div>
 
     <div class="col-sm-8 text-left"> 

@@ -79,9 +79,9 @@ panier.push({Name:this.value, Quantite:slcVal});
 var serializePanier=JSON.stringify(panier);
 
 $.ajax({
-    url: "Panier.php",
+    url:"Panier.php",
     type:'POST',
-    data: serializePanier,
+    data:serializePanier,
    
     success : function(code_html, statut){
         console.log(serializePanier);
