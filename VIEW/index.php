@@ -56,7 +56,7 @@ session_start();
   <div class="row content">
     <div class="col-sm-2 sidenav">
     <h2>Article</h2>
-    <input  id="searchItem">
+    <input  id="searchItem"/>
     <input id="search" class="btn btn-info" value="find"/>
 
     </div>

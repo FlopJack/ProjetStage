@@ -22,7 +22,7 @@ function GetFLeursName(){
         $req = "SELECT  Nom FROM fleurs ORDER BY RAND () LIMIT 1  ";
         $stm=$bdd->prepare($req);
         $stm->execute();
-        $result= $stm->fetch();
+        $result= $stm->fetchAll(PDO::FETCH_ASSOC);
         return $result;
 
 

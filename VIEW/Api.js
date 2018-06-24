@@ -1,10 +1,31 @@
 var keyword;
 
+$(function GetWord(){
+    $.ajax({
+        url:'KeyWord.php',
+        type:'GET',
+        datatype:"json",
+        success:function (data,statut){
+         txtkey=JSON.parse(data); 
+         keyword=txtkey[0].Nom;
+
+        }
+    })
+    .done(function(){
+       //console.log("success");
+       console.log(keyword) 
+       
+    })
+    .fail(function(){
+        console.log("error");   
+    })
+    
+    
+    });
+    
+
 $(function SearchApi(){
-
 $("#search").on("click",function(){
-
-var searchItem =$("#searchItem").val();
 var urlApp="https://en.wikipedia.org/w/api.php?action=opensearch&search="+ keyword +"&format=json&origin=*"; 
 
 $.ajax({
@@ -14,43 +35,19 @@ $.ajax({
     async: true,
     datatype:"json",
     success:function (data,statut){
-    console.log(data);
-    console.log(searchItem);
+    
+        console.log(data);
     }
 })
 .done(function(){
     console.log("success");
-  
+    
 })
 .fail(function(){
-
     console.log("error");
 })
 })
-
 });
 
-
-$(function GetWord  (){
-
-$.ajax({
-    url:'KeyWord.php',
-    type:'GET',
-    datatype:"json",
-    success:function (data,statut){
-keyword=data['Name'];    
-
-    }
-})
-.done(function(){
-    console.log("success"); 
-})
-.fail(function(){
-    console.log("error");   
-})
-
-
-
-});
 
 
