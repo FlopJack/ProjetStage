@@ -26,7 +26,7 @@ $(function GetWord(){
 
 $(function SearchApi(){
 $("#search").on("click",function(){
-var urlApp="https://en.wikipedia.org/w/api.php?action=opensearch&search="+ keyword +"&format=json&origin=*"; 
+var urlApp="https://en.wikipedia.org/w/api.php?action=parse&page="+ keyword +"&format=json&origin=*"; 
 
 $.ajax({
     url:urlApp,

@@ -81,6 +81,7 @@ var serializePanier=JSON.stringify(panier);
 $.ajax({
     url:"Panier.php",
     type:'POST',
+    datatype:"json",
     data:serializePanier,
    
     success : function(code_html, statut){
@@ -103,8 +104,7 @@ $.ajax({
 });    
    </script>
 </body>
-<h1> <?php  $robert=json_decode($_POST['Name']);
-echo $robert;?></h1>
+
 </html>
 
 

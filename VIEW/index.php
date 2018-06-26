@@ -1,7 +1,4 @@
-<?php
 
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +52,7 @@ session_start();
  <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-    <h2>Article</h2>
-    <input  id="searchItem"/>
-    <input id="search" class="btn btn-info" value="find"/>
+
 
     </div>
 
