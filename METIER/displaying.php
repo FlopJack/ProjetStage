@@ -9,7 +9,7 @@ $idS=0;
 
 foreach ($result as $key) {
 
-echo '<div class="card text-white bg-primary mb-3 cardId " style="max-width: 20rem ">';
+echo '<div class="card border-success mb-3" style="max-width: 20rem ">';
 
     echo    '<div class="card-header cardHead" name="txtcard">'.$key['Nom'];
 
