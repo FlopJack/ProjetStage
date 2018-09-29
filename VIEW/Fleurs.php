@@ -20,7 +20,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">GAEC Engoulevents</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Fleurs.php">Les fleurs</a>
@@ -45,11 +45,14 @@
      
         <input class="form-control col-3  " id="srcId" 
          placeholder="Search" onkeyup="SearchBar()">
+         <a  class="btn btn-danger" href="Connexion.html">Connexion</a>
       
     </div>
 
 
   </nav>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
   <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
@@ -61,9 +64,10 @@
      ?>
     </div>
 </div>
+
 <script>
 
-  $(document).ready(function(){
+  $(document).ready(function AddPanier(){
     var panier=[,];
   
    $(document).on("click","button",function(){
@@ -71,37 +75,31 @@
 var btnId=this.id;
 var btnName= this.value; 
 var slcVal=$("select[id="+btnId+"]").val();
-
-
 panier.push({Name:this.value, Quantite:slcVal});
-
-
 var serializePanier=JSON.stringify(panier);
+
+
 
 $.ajax({
     url:"Panier.php",
-    type:'POST',
+    type:"POST",
     datatype:"json",
     data:serializePanier,
    
     success : function(code_html, statut){
         console.log(serializePanier);
         console.log(statut);
-
-        
+    
     }, 
-    /*$.post("Panier.php",function(serializePanier))*/
+    
     error : function(resultat, statut, erreur){
         console.log("La requête n'a pas aboutie...");
         console.log(resultat);
         console.log(statut);
         console.log(erreur);
-    
+   
     }
     });
-
-
-
     });
 });
 

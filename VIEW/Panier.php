@@ -38,7 +38,7 @@
      
       </ul>
      
-       <a href="Connexion.html">Connexion</a>
+       <a  class="btn btn-danger" href="Connexion.html">Connexion</a>
       
     </div>
 
@@ -49,17 +49,27 @@
    
   
 </div>
-
-<?php 
-session_start();
-// $json_str = file_get_contents('php://input');
-
-// $json_obj = json_decode($json_str);
+<script>
 
 
-//   print_r( $json_obj);
-print_r($_SESSION);
-?>
+$.getJSON( "Fleurs.php", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
 
+})
+
+
+$.getJSON="Fleurs.php";
+
+</script>
 </body>
+
 </html>
